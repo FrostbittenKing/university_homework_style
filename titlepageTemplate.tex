@@ -23,13 +23,20 @@
         \theSemester
       \end{flushright}
     \end{minipage}
+    \ifdefined\theExerciseNr
     \\[0.3cm]
-    \textsc{\theExerciseNr} 
+    \textsc{\theExerciseNr}
     \\[0.7cm]
+    \else
+    \\[1.5cm]
+    \fi
+%    \\[0.7cm]
     % Title
     \HRule \\[0.4cm]
+
+    \ifdefined\theExerciseName
     { \huge \bfseries \theExerciseName }\\[0.4cm]
-    
+    \fi
     \HRule \\[2cm]
     
     % Author and supervisor
@@ -55,9 +62,9 @@
     
     % Bottom of the page
     % \large \groupNr \\[12pt]
-    \large \authorList \\[0.5cm]
+    \large \theAuthorList \\[0.5cm]
     
-    {\href{mailto:\mailAddr}{\mailAddr}\\} 
+    {\href{mailto:\theMailAddr}{\theMailAddr}\\} 
     \large \today
   \end{center}
 \end{titlepage}

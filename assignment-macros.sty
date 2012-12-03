@@ -1,11 +1,11 @@
 \ProvidesPackage{assignment-macros}
 
 \fancyhf{}
-\fancyhead[L]{\lvNr\ \lvName}
-\fancyhead[R]{\exerciseNr}
-\fancyfoot[L]{\authorName, \matrNr, \studNr}
+\fancyhead[L]{\theLvNr\ \theLvName}
+\fancyhead[R]{\theExerciseNr}
+\fancyfoot[L]{\theAuthorName, \theMatrNr, \theStudNr}
 \fancyfoot[C]{- \thepage /\pageref{LastPage} -}
-\fancyfoot[R]{\semester}
+\fancyfoot[R]{\theSemester}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \newenvironment{frcseries}{\fontfamily{stix}\selectfont}{}
