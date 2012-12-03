@@ -1,12 +1,26 @@
-\newcommand{\lvNr}{TO FILL}
-\newcommand{\lvName}{TO FILL}
-\newcommand{\semester}{TO FILL}
-\newcommand{\exerciseNr}{TO FILL}
-\newcommand{\exerciseName}{TO FILL}
+\ProvidesPackage{assignment-titlepageMacros}
+
+\newcommand{\lvNr}[1]{
+  \newcommand{\theLvNr}{#1}
+}
+\newcommand{\lvName}[1]{
+        \newcommand{\theLvName}{#1}
+}
+\newcommand{\semester}[1]{
+        \newcommand{\theSemester}{#1}
+}
+\newcommand{\exerciseNr}[1]{
+        \newcommand{\theExerciseNr}{#1}
+}
+\newcommand{\exerciseName}[1]{
+        \newcommand{\theExerciseName}{#1}
+}
 
 \newcommand{\authorName}{Eugen Dahm}
 \newcommand{\matrNr}{0625325}
-\newcommand{\studNr}{534}
+\newcommand{\studNr}[1]{
+  \newcommand{\theStudNr}{#1}
+}
 \newcommand{\mailAddr}{e0625325@student.tuwien.ac.at}
 
 % OPTIONAL
@@ -20,6 +34,6 @@
 %  \authorNameF, \matrNrF, \studNrF\\ [0.15cm]
 %  \authorNameM, \matrNrM, \studNrM\\ [0.15cm]
 %  \authorNameH, \matrNrH, \studNrH\\ [0.15cm]
-  \authorName, \matrNr, \studNr
+  \authorName, \matrNr, \theStudNr
 }
 

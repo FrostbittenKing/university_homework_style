@@ -1,3 +1,5 @@
+\ProvidesPackage{assignment-macros}
+
 \fancyhf{}
 \fancyhead[L]{\lvNr\ \lvName}
 \fancyhead[R]{\exerciseNr}
@@ -13,3 +15,7 @@
 
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Result:}}
+\renewcommand{\maketitle}
+{
+  \input{titlepageTemplate}
+}
