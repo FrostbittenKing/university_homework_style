@@ -2,4 +2,5 @@
 \LoadClass[11pt,a4paper]{article}
 \RequirePackage{assignment-config}
 \RequirePackage{assignment-macros}
+\RequirePackage{assignment-environments}
 \RequirePackage{assignment-titlepageMacros}

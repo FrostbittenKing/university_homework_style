@@ -1,0 +1,11 @@
+\ProvidesPackage{assignment-envrionments}
+\RequirePackage{alltt}
+\RequirePackage{framed,color}
+\newenvironment{shadedverbatim}[1][listinggray]{
+\definecolor{shadecolor}{named}{#1}
+\begin{alltt}
+\begin{shaded}
+}{
+\end{shaded}
+\end{alltt}
+}
