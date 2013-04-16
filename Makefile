@@ -2,11 +2,13 @@ INSTALL_DIR = ~/texmf/tex/latex
 
 all : document
 
-document : simpleExample.tex
+document : simpleExample.tex 
 	pdflatex simpleExample.tex
-
+	# bibtex simpleExample
+	# pdflatex simpleExample.tex
+	pdflatex simpleExample.tex
 clean :
-	rm -rf *.toc *.log *.aux *.out *.dvi *.pdf *~
+	rm -rf *.toc *.log *.aux *.out *.dvi *.pdf *~ *.bbl *.blg
 
 
 
