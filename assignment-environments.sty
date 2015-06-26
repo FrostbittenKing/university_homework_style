@@ -1,6 +1,7 @@
 \ProvidesPackage{assignment-envrionments}
 \RequirePackage{alltt}
 \RequirePackage{framed,color}
+\RequirePackage{xparse}
 \newenvironment{shadedverbatim}[1][listinggray]{
 \definecolor{shadecolor}{named}{#1}
 \begin{alltt}
@@ -8,4 +9,14 @@
 }{
 \end{shaded}
 \end{alltt}
+}
+
+\newenvironment{itemizepages}{
+  \begin{itemize}
+    \let\originalitem\item
+    \renewcommand\item[3][]{\originalitem[##1]{##3} ({$##2$ page})}
+    \newcommand\itempl[3][]{\originalitem[##1]{##3} ({$##2$ pages})}
+  }{
+  \end{itemize}
+  \let\item\originalitem
 }

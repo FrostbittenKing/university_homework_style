@@ -44,10 +44,7 @@
 
 \renewcommand{\authorList}[3]{
   \ifdefined\theAuthorList
-  \let \oldTheAuthorList\theAuthorList
-  \renewcommand{\theAuthorList}{
-    \oldTheAuthorList\\[0.15cm]
-    #1, #2, #3
-  }                                                                                         
+  \expandafter\def\expandafter\theAuthorList\expandafter{\theAuthorList\\[0.15cm]
+    #1, #2, #3}
   \fi
 }
